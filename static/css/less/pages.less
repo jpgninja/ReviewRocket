@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+// Page styles
+.page { 
+	padding:40px;
+	width:720px;
+	margin:40px auto;
+	display:none;
+	background-color: #eee;
+	font-size:20px;
+	.border-radius(5px);
+
+	&.page-active {
+		display:block;
+	}
+}
+
+
+
+// Rating Page
+
+// Rate list
+.rating {
+	list-style-type: none;
+	overflow: hidden;
+	padding:0;
+	text-align: center;
+	width:630px;
+}
+
+// Rate object
+.rate {
+	float:left;
+	width:210px;
+	&.rate-positive a {
+		text-shadow: 1px 1px 3px #87A346;
+		.background-image(linear-gradient(to bottom, #c2dd87 0%,#91af4b 100%));
+		&:hover {
+			.background-image(linear-gradient(to bottom, #c2dd87 0%,#89A547 100%));
+		}
+	}
+	&.rate-neutral a {
+		text-shadow: 1px 1px 3px #4678AA;
+		.background-image(linear-gradient(to bottom, #84bcf3 0%,#528fcc 100%));
+		&:hover {
+			.background-image(linear-gradient(to bottom, #84bcf3 0%,#4C83BA 100%));
+		}
+	}
+	&.rate-negative a {
+		text-shadow: 1px 1px 3px #A85E5E;
+		.background-image(linear-gradient(to bottom, #ffc9c4 0%,#cc7272 100%));
+		&:hover {
+			.background-image(linear-gradient(to bottom, #ffc9c4 0%,#BC6969 100%));
+		}
+	}
+
+	a {
+		display:inline-block;
+		width:200px;
+		height:210px;
+		background-color: #eee;
+		text-align: center;
+		margin:0;
+		text-decoration: none;
+		color:#fff;
+
+		.animation(all 1s linear alternate);
+		.border-radius(4px);
+		
+		&:hover {
+			.title {
+				padding:20px 0 7px;
+			}
+		}
+
+		.title {
+			display:block;
+			font-size:20px;
+			padding:20px 0 10px;
+		}
+		.fa {
+			font-size:110px;
+			line-height: 110px;
+		}
+	}
+}
+
+
+// 
+.leave-review {
+	margin-top:30px;
+}
