@@ -4,10 +4,13 @@ jQuery('document').ready(function() {
 			pages 							= {
 				rate: 		jQuery('.page-rate'),
 				review: 	jQuery('.page-review'),
-				feedback: jQuery('.page-feedback')
+				feedback: jQuery('.page-feedback'),
+				thankyou: jQuery('.page-thankyou')
 			},
 			positiveRating 			= jQuery('.rate-positive'),
 			nonPositiveRating 	= jQuery('.rate-neutral, .rate-negative'),
+			feedbackForm 				=	jQuery('.form-feedback'),
+			feedbackSubmit 			= jQuery('.feedback-submit'),
 
 
 			/**
@@ -24,8 +27,13 @@ jQuery('document').ready(function() {
 			 */
 			addListeners = function() {
 
+				// Page: Rate
 				positiveRating.on('click', 			positiveReviewHandler);
 				nonPositiveRating.on('click', 	nonPositiveReviewHandler);
+
+				// Page: Feedback
+				feedbackSubmit.on('click', 			feedbackFormHandler);
+				feedbackForm.on('submit', 			feedbackFormSubmitHandler);
 			},
 
 			pageTransition = function(transitionArray) {
@@ -94,7 +102,7 @@ jQuery('document').ready(function() {
 
 			pageHiddenHandler = function(transitionArray) {
 
-				// console.log('pageHiddenHandler', transitionArray);
+				console.log('pageHiddenHandler', transitionArray, pages[transitionArray[1]]);
 
 				pages[transitionArray[0]].removeClass('page-active');
 				pages[transitionArray[1]].addClass('page-active');
@@ -102,12 +110,51 @@ jQuery('document').ready(function() {
 			},
 
 			pageShownHandler = function(transitionArray) {
-				// console.log('pageShownHandler', transitionArray);
+				
+				console.log('pageShownHandler', transitionArray);
+
 				jQuery('.page-active')
 					.find('input')
 					.eq(0)
 					.focus();
-			}
+			},
+
+			feedbackFormHandler = function(event) {
+				console.log('feedbackFormHandler', 'Form sent!');
+				
+				event = event || window.event;
+
+				if (event) {
+
+					// TODO: Ajax form post, then animate to thank you.
+
+					// Stop further events from firing
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Submit the form
+					feedbackForm.submit();
+
+					// Tranisition to Thank You page
+					transitionArray = ['feedback', 'thankyou'];
+					pageTransition(transitionArray);
+									
+				}
+
+				return false;
+			},
+
+			feedbackFormSubmitHandler = function(event) {
+				event = event || window.event;
+
+				if (event) {
+					// Stop further events from firing
+					event.stopPropagation();
+					event.preventDefault();
+				}
+
+				return false;
+			};
 
 	init();
 });

@@ -1,4 +1,4 @@
-<div class="page page-thank-you">
+<div class="page page-thankyou">
 	<h2 class="top">
 		Your help makes us a better company
 	</h2>

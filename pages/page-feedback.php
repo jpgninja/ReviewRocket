@@ -25,7 +25,7 @@
 
 		<textarea name="feedback" class="feedback" cols="30" rows="10" placeholder="Leave us a short message"></textarea>
 
-		<a href="#" class="btn btn-default btn-success btn-lg">
+		<a href="#" class="btn btn-default btn-success btn-lg feedback-submit">
 			<span class="glyphicon glyphicon-envelope"></span> 
 			Give us Feedback
 		</a>

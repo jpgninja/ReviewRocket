@@ -40,9 +40,9 @@ LOG;
 				
 			} else {  // if first method is not working, for example because of wrong file permissions, email the data
 			
-				$to = 'chris@clientcoffee.com';  
-				$subject = 'ReviewRocket Hack Attempt';
-				$header = 'From: noreply@clientcoffee.com';
+				$to 			= 'chris@clientcoffee.com';  
+				$subject 	= 'ReviewRocket Hack Attempt';
+				$header 	= 'From: noreply@clientcoffee.com';
 				if (mail($to, $subject, $logging, $header)) {
 					echo "Sent notice to admin.";
 				}
@@ -114,10 +114,10 @@ LOG;
 				setcookie("WRCF-Name", $_POST['req-name'], time()+60*60*24*365);
 				setcookie("WRCF-Email", $_POST['req-email'], time()+60*60*24*365);
 			}
-			
+
 
 			// PREPARE THE BODY OF THE MESSAGE
-			$message  = '<html>'
+			$message  = '<html>';
 			$message .= '<body>';
 			$message .= '<img src="http://css-tricks.com/examples/WebsiteChangeRequestForm/images/wcrf-header.png" alt="Client Feedback" />';
 			$message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
