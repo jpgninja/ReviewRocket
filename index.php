@@ -34,73 +34,14 @@ else {
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- Add your site or application content here -->
-		<div class="page page-active page-rate">
-			<h2>
-				How was your experience working with us at Acme Studios?
-			</h2>
+		<?php
 
-			<ul class="rating">
-				<li class="rate rate-negative">
-					<a href="#">
-						<span class="title">Could be better, honestly</span>
-						<i class="fa fa-frown-o"></i>
-					</a>
-				</li>
-				<li class="rate rate-neutral">
-					<a href="#">
-						<span class="title">It was OK, nothing special</span>
-						<i class="fa fa-meh-o"></i>
-					</a>
-				</li>
-				<li class="rate rate-positive">
-					<a href="#">
-						<span class="title">It was good, I'm happy</span>
-						<i class="fa fa-smile-o"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-		
-		<div class="page page-review">
-			<h2>
-				Do you think we're a good business?
-			</h2>
-			<p>
-				<em>A few years ago, having great service was enough for a business to survive...</em><br><br>
+		include_once('pages/page-rate.php');
+		include_once('pages/page-review.php');
+		include_once('pages/page-feedback.php');
+		include_once('pages/page-thankyou.php');
 
-				These days people go to on Google to learn about companies. Because of this, Google is very immportant to our business and we hope you will spread the word by leaving us a nice review (it takes 15 seconds): 
-			</p>
-			<p>
-				<a href="https://plus.google.com/_/widget/render/localreview?placeid=<?php echo $placeid; ?>"  class="leave-review btn btn-default btn-info btn-lg">
-					<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;
-					Leave a Quick Review
-				</a>
-			</p>
-		</div>
-
-		<div class="page page-feedback">
-			<p>
-				Feedback please!
-			</p>
-			<form action="" id="form-feedback">
-
-				<textarea name="feedback" id="feedback" cols="30" rows="10">Leave us a short message</textarea>
-
-				<a href="#" class="btn btn-default btn-success btn-lg">
-					<span class="glyphicon glyphicon-envelope"></span> 
-					Give us Feedback
-				</a>
-				
-			</form>
-
-		</div>
-
-		<div class="page page-thank-you">
-			<p>
-				Thank You!
-			</p>
-		</div>
+		?>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
