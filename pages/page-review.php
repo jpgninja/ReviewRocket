@@ -1,6 +1,6 @@
 <div class="page page-review">
-	<h2>
-		Do you think we're a good business?
+	<h2 class="top">
+		You make us happy
 	</h2>
 	<p>
 		<em>A few years ago, having great service was enough for a business to survive...</em><br><br>

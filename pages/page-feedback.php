@@ -8,14 +8,17 @@
 		Your experience was less than great, and that's not acceptable for us. We work hard to make sure you get service that knocks your socks off.
 	</p>
 
+
 	<h2>
 		We want to make things right for you
 	</h2>
+
 	<p>
-		Give us some quick feedback, and we'll do what we can to right our wrong.
+		Give us some quick feedback, and we'll do what we can to fix your situation for you. Type in your name, phone, and your feedback and we'll see what can be done for you.
 	</p>
 
-	<form action="" class="form-feedback">
+
+	<form action="http://clientcoffee.com/reviewrocket/mailer.php" class="form-feedback">
 
 		<input type="text" class="name" name="name" placeholder="Name">
 		<input type="text" class="phone" name="phone" placeholder="Phone">

@@ -1,5 +1,5 @@
-<div class="page page-rate">
-	<h2>
+<div class="page page-active page-rate">
+	<h2 class="top">
 		How was your experience working with us at Acme Studios?
 	</h2>
 

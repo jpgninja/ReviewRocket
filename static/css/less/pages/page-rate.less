@@ -5,12 +5,14 @@
 	padding:0;
 	text-align: center;
 	width:630px;
+	padding-top:20px;
 }
 
 // Rate object
 .rate {
 	float:left;
 	width:210px;
+	margin-bottom: 20px;
 	&.rate-positive a {
 		text-shadow: 1px 1px 3px #87A346;
 		.background-image(linear-gradient(to bottom, #c2dd87 0%,#91af4b 100%));
@@ -47,6 +49,7 @@
 		.border-radius(4px);
 		
 		&:hover {
+			.box-shadow(0 2px 5px rgba(33,33,33,0.2));
 			.title {
 				padding:20px 0 7px;
 			}

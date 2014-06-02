@@ -38,7 +38,7 @@ jQuery('document').ready(function() {
 						outArgs = {
 							opacity: 		0,
 							scale: 			0.8,
-							ease: 			Power4.easeInOut,
+							ease: 			Power4.easeOut,
 							onComplete: function() {
 								pageHiddenHandler(transitionArray);
 							}
@@ -46,15 +46,15 @@ jQuery('document').ready(function() {
 						inArgs 	= {
 							opacity: 		1,
 							scale: 			1,
-							ease: 			Power4.easeInOut,
+							ease: 			Power4.easeOut,
 							onComplete: function() {
 								pageShownHandler(transitionArray[1]);
 							}
 						};
 
-				tl.to(pages[transitionArray[1]], 0, 	inPreparationArgs);
-				tl.to(pages[transitionArray[0]], 0.25, outArgs);
-				tl.to(pages[transitionArray[1]], 0.25, inArgs);
+				tl.to(pages[transitionArray[1]], 0, 		inPreparationArgs);
+				tl.to(pages[transitionArray[0]], 0.2, 	outArgs);
+				tl.to(pages[transitionArray[1]], 0.5, 	inArgs);
 
 				tl.play();
 
@@ -103,7 +103,10 @@ jQuery('document').ready(function() {
 
 			pageShownHandler = function(transitionArray) {
 				// console.log('pageShownHandler', transitionArray);
-
+				jQuery('.page-active')
+					.find('input')
+					.eq(0)
+					.focus();
 			}
 
 	init();
